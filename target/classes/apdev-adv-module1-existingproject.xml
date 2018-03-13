@@ -11,11 +11,5 @@ http://www.mulesoft.org/schema/mule/ee/dw http://www.mulesoft.org/schema/mule/ee
     <flow name="apdev-adv-module1-existingprojectFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/first" allowedMethods="GET" doc:name="HTTP"/>
         <set-payload value="#['Maven Project']" doc:name="Set Payload"/>
-        <dw:transform-message doc:name="Transform Message">
-            <dw:set-payload><![CDATA[%dw 1.0
-%output application/json
----
-payload]]></dw:set-payload>
-        </dw:transform-message>
     </flow>
 </mule>
