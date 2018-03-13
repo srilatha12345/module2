@@ -11,4 +11,8 @@ http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/cor
         <flow-ref name="apdev-adv-module1-existingprojectFlow" doc:name="Flow-ref to apdev-adv-module1-existingprojectFlow"/>
         <munit:assert-payload-equals message="Failed " expectedValue="#['Maven Project']" doc:name="Assert Payload"/>
     </munit:test>
+    <munit:test name="apdev-adv-module1-existingproject-test-suite-apdev-adv-module1-existingprojectFlowTest1" description="Test">
+        <flow-ref name="apdev-adv-module1-existingprojectFlow" doc:name="Flow-ref to apdev-adv-module1-existingprojectFlow"/>
+        <munit:assert-payload-equals message="TEST FAILED" expectedValue="#['TEST Project']" doc:name="Assert Payload"/>
+    </munit:test>
 </mule>
